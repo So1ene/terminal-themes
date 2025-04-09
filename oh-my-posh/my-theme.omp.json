@@ -1,0 +1,61 @@
+{
+    "": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "blocks": [
+        {
+            "type": "prompt",
+            "alignment": "left",
+            "segments": [
+                {
+                    "properties": {
+                        "cache_duration": "none",
+                        "time_format": "15:04"
+                    },
+                    "template": "\n[{{ .CurrentDate | date .Format }}]",
+                    "foreground": "#1b4258",
+                    "type": "time",
+                    "style": "plain"
+                },
+                {
+                    "template": " \uf0e7 ",
+                    "foreground": "#1b4258",
+                    "type": "root",
+                    "style": "plain"
+                },
+                {
+                    "properties": {
+                        "folder_icon": "\ue5fe",
+                        "home_icon": "~",
+                        "style": "agnoster"
+                    },
+                    "template": " {{ .Path }}",
+                    "foreground": "#56B6C2",
+                    "type": "path",
+                    "style": "plain"
+                },
+                {
+                    "properties": {
+                        "branch_icon": "",
+                        "fetch_status": true
+                    },
+                    "foreground": "#D0666F",
+                    "style": "plain",
+                    "template": " <#61AFEF>git:(</>{{ .HEAD }}<#61AFEF>)</>{{ if or (.Working.Changed) (.Staging.Changed) }}<yellow> ✗</yellow></>{{ end }}",
+                    "type": "git"
+                },
+                {
+                "foreground": "#DCB977",
+                "style": "plain",
+                "template": " \uf119 ",
+                "type": "status"
+                },
+                {
+                    "template": "<#1b4258> ❯ </#1b4258> ",
+                    "foreground": "#1b4258",
+                    "type": "text",
+                    "style": "plain"
+                }
+            ]
+        }
+    ],
+    "version": 3
+}
