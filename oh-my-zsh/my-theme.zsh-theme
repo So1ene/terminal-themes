@@ -16,7 +16,6 @@ PATH_COLOR=$(fg_color "#56B6C2")
 GIT_PREFIX_COLOR=$(fg_color "#61AFEF")
 GIT_BRANCH_COLOR=$(fg_color "#D0666F")
 RESET_COLOR="%{$reset_color%}"
-
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$GIT_PREFIX_COLOR%}git:(%{$GIT_BRANCH_COLOR%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$RESET_COLOR%} "
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$GIT_PREFIX_COLOR%}) %{$fg[yellow]%}%1{✗%}"
@@ -43,6 +42,7 @@ custom_prompt_path() {
   result="${result}/${parts[n]}"
   echo "$result"
 }
+
 build_prompt() {
   local timestamp="${TIME_COLOR}[%D{%H:%M}]${RESET_COLOR}"
   local fullpath="${PATH_COLOR}$(custom_prompt_path)${RESET_COLOR}"
