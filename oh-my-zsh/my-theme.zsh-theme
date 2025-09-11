@@ -1,4 +1,4 @@
-# Requires MesloLGLDZ Nerd Font
+# Requires MesloLGS NF Nerd Font
 
 autoload -U colors && colors
 setopt prompt_subst
